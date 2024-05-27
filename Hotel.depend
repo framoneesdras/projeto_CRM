@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1584205420 source:c:\users\rauld\onedrive\documentos\projetos1\tp_pds\hotel\main.cpp
+	<iostream>
+
+1716765422 source:c:\users\rauld\onedrive\documentos\projetos1\tp_pds\hotel\pessoa.cpp
+	<iostream>
+	"Pessoa.h"
+	<string>
+
+1716766000 c:\users\rauld\onedrive\documentos\projetos1\tp_pds\hotel\pessoa.h
+	<string>
+
+1716765384 source:c:\users\rauld\onedrive\documentos\projetos1\tp_pds\hotel\cliente.cpp
+	<iostream>
+	"Cliente.h"
+	"Pessoa.h"
+	<string>
+
+1716766235 c:\users\rauld\onedrive\documentos\projetos1\tp_pds\hotel\cliente.h
+	"Pessoa.h"
+	<string>
+
+1716765916 source:c:\users\rauld\onedrive\documentos\projetos1\tp_pds\hotel\cliente_.cpp
+	<iostream>
+	"Cliente.h"
+	"Cliente_.h"
+	<string>
+
+1716766076 c:\users\rauld\onedrive\documentos\projetos1\tp_pds\hotel\cliente_.h
+	"Cliente.h"
+	<string>
+
+1716765765 source:c:\users\rauld\onedrive\documentos\projetos1\tp_pds\hotel\hospede.cpp
+	<iostream>
+	"Cliente.h"
+	"Hospede.h"
+	<string>
+
+1716766123 c:\users\rauld\onedrive\documentos\projetos1\tp_pds\hotel\hospede.h
+	"Cliente.h"
+	<string>
+
