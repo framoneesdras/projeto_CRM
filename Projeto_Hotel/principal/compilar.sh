@@ -3,5 +3,10 @@
 cd include/
 g++ -c *.cpp 
 cd ..
-g++ principal\\main.cpp include\\*.o -o executar_interface
+cd principal/
+g++ -c *.cpp
+cd ..
+g++ include/*.o principal/*.o -o executar_interface
 executar_interface.exe
+
+//para compilar, por enquanto, é preciso adicionar os arquivos de src em include. A classe "hospede" está dando algum erro, ainda tentando identificar
