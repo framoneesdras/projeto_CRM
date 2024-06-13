@@ -1,12 +1,12 @@
 #include <iostream>
 #include <string>
 
+#include "../include/Pessoa.h"
 #include "../include/Avaliacoes.h"
 #include "../include/Cliente.h"
-#include "../include/Hospede.h"
+#include "../include/Hospede.h" //hospede tá dando erro
 #include "../include/Hotel.h"
 #include "../include/Pagamentos.h"
-#include "../include/Pessoa.h"
 #include "../include/Quarto.h"
 #include "../include/Quarto_Luxo.h"
 #include "../include/Quarto_Simples.h"
@@ -44,7 +44,7 @@ int main() {
     mensagem_inicial();
 
     bool i = true;
-    string escolha;
+    int escolha;
 
 
     while(i==true) {
@@ -54,16 +54,16 @@ int main() {
 
         switch (escolha)
         {
-            case '1':
+            case 1:
                 std::cout << "Escolheu 1" << endl << endl;
                 break;
-            case '2':
+            case 2:
                 std::cout << "Escolheu 2" << endl << endl;
                 break;
-            case '3':
+            case 3:
                 std::cout << "Escolheu 3" << endl << endl;
                 break;
-            case '4':
+            case 4:
                 std::cout << "Escolheu Sair" << endl << endl;
                 i = false;
                 break;
