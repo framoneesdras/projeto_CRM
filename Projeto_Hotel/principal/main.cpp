@@ -1,10 +1,18 @@
 #include <iostream>
 #include <string>
 
-#include "../src/Cliente_.h"
-#include "../src/Cliente.h"
-#include "../src/hospede.h"
-#include "../src/Pessoa.h"
+#include "../include/Avaliacoes.h"
+#include "../include/Cliente.h"
+#include "../include/Hospede.h"
+#include "../include/Hotel.h"
+#include "../include/Pagamentos.h"
+#include "../include/Pessoa.h"
+#include "../include/Quarto.h"
+#include "../include/Quarto_Luxo.h"
+#include "../include/Quarto_Simples.h"
+#include "../include/Quarto_Suite.h"
+#include "../include/Reserva.h"
+
 
 mensagem_inicial() {
     std::cout << "==========================================" << std::endl;
