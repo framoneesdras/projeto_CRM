@@ -1,13 +1,3 @@
-/* 
-Estudantes: Esdras Framone - 2022060827
-            Raul Vitor - 
-            Victor - 
-Turma: PDS II - TF
-Semestre 01/24
--------------------/
-Projeto PDS II - Sistema Gerenciamento Hotel
-*/
-
 #include <iostream>
 #include <string>
 
