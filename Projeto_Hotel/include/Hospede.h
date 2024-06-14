@@ -1,34 +1,27 @@
-#ifndef CLIENTE_H
-#define CLIENTE_H
-
+#ifndef HOSPEDE_H
+#define HOSPEDE_H
 
 #include "Pessoa.h"
+#include "Cliente.h"
 #include <string>
+#include <vector>
 
 using std::string;
 
-    // Classe Cliente derivada de pessoa
-
-    class Cliente : public Pessoa
-    {
-
+class Hospede : public Cliente{
     private:
-
         string email;
-        //int ID_Cliente;
-        //int tipo_Cliente; // 1 = Hospede , 2 = Cliente_
+        std::vector<string> historicoReserva;
 
     public:
-
-
-        Cliente(const string nome, const string cpf, const string telefone, const string email);
-
-        ~Cliente();
+        Hospede(const string nome, const string cpf, const string telefone, const string email);
+        ~Hospede();
 
         string getemail();
         void setemail(string email);
 
-
+        void addReserva(string reserva);
+        std::vector<string> gethistoricoReserva();
 };
 
-#endif // CLIENTE_H
+#endif // HOSPEDE_H
