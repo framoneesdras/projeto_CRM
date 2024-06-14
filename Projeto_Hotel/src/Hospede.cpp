@@ -1,32 +1,36 @@
 #include <iostream>
+#include <string>
+#include <vector>
 #include "Cliente.h"
 #include "Hospede.h"
-#include <string>
 
-using std::string;
-using std::cout;
-using std::endl;
+using namespace std;
 
+Hospede::Hospede(const string nome, const string cpf, const string telefone, const string email)
+: Cliente (nome, cpf, telefone, email)
+{
+}
 
-    Hospede::Hospede(const string nome, const string cpf, const string telefone, const string email)
-    : Cliente (nome, cpf, telefone, email)
+Hospede::~Hospede()
+{
+    cout << "Destruindo o Objeto" << endl;
+}
 
-    {
+void Hospede::addReserva(string reserva)
+{
+    historicoReserva.push_back(reserva);
+}
 
+std::vector<string> Hospede::gethistoricoReserva()
+{
+    return historicoReserva;
+}
 
-    }
+string Hospede::getemail()
+{
+    return email;
+}
 
-    Hospede::~Hospede()
-    {
-        cout << "Destruindo o Objeto" << endl;
-    }
-
-    void Hospede::addReserva(string reserva)
-    {
-        historicoReserva.push_back(reserva);
-    }
-
-    vector<string> Hospede::gethistoricoReserva()
-    {
-        return historicoReserva;
-    }
+void Hospede::setemail(string email){
+    this->email = email;
+}

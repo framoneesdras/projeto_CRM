@@ -6,7 +6,10 @@ cd ..
 cd principal/
 g++ -c *.cpp
 cd ..
-g++ include/*.o principal/*.o -o executar_interface
+g++ include/*.h principal/*.cpp -o executar_interface
 executar_interface.exe
 
-//para compilar, por enquanto, é preciso adicionar os arquivos de src em include. A classe "hospede" está dando algum erro, ainda tentando identificar
+// para compilar, por enquanto, é preciso adicionar os arquivos de src em include. 
+
+
+g++ *.h *.cpp -o executar_interface
