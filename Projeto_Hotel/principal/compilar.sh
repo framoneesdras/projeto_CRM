@@ -13,3 +13,24 @@ executar_interface.exe
 
 
 g++ *.h *.cpp -o executar_interface
+
+
+#Com tudo na mesma pasta
+
+#Dados.csv tem que ficar junto ao exercutável
+
+g++ -c *.cpp
+g++ *.h *.cpp -o executar_interface
+executar_interface.exe
+
+#Nova tentantiva
+
+cd src/
+g++ -c *.cpp
+cd ..
+cd principal/
+g++ -c main.cpp
+cd ..
+g++ src/*.o principal/main.o -o principal/executar_interface
+cd principal
+executar_interface.exe
