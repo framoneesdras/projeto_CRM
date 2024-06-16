@@ -1,4 +1,4 @@
-# Projeto Final PDS 2 "Hotel"
+# Projeto Final PDS 2 "Hotel Bellagio"
 
     'Universidade Federal de Minas Gerais'
 
