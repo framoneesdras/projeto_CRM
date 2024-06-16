@@ -196,6 +196,4 @@ int main() {
                 break;
         }
     }
-
-    mensagem_teste();
 }
