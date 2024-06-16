@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Pessoa.h"
-#include "Cliente.h"
+#include "../include/Pessoa.h"
+#include "../include/Cliente.h"
 #include <string>
 
 using std::string;

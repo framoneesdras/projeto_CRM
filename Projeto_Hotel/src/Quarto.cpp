@@ -1,4 +1,4 @@
-#include "Quarto.h"
+#include "../include/Quarto.h"
 
 #include <iostream>
 #include <string>

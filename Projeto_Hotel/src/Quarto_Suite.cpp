@@ -1,4 +1,4 @@
-#include "Quarto_Suite.h"
+#include "../include/Quarto_Suite.h"
 
 #include <iostream>
 #include <string>

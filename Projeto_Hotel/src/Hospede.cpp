@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "Cliente.h"
-#include "Hospede.h"
+#include "../include/Cliente.h"
+#include "../include/Hospede.h"
 
 using namespace std;
 

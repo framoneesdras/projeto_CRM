@@ -1,4 +1,4 @@
-#include "Reserva.h"
+#include "../include/Reserva.h"
 
 #include <iostream>
 #include <string>

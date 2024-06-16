@@ -1,4 +1,4 @@
-#include "Avaliacoes.h"
+#include "../include/Avaliacoes.h"
 
 // Construtor
 Avaliacoes::Avaliacoes(string comentario, int nota) : comentario(comentario), nota(nota) {}

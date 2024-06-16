@@ -1,4 +1,4 @@
-#include "Pagamentos.h"
+#include "../include/Pagamentos.h"
 
 #include <iostream>
 #include <string>
