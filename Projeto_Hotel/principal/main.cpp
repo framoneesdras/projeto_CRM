@@ -38,10 +38,6 @@ void mensagem_menu() {
     cout << std::endl;
 }
 
-void converte_comando() {
-    std::cout << "CONVERTE";
-}
-
 void cadastrarQuartoSimples(Dados& dados) {
     int numero;
     double preco;
