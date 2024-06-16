@@ -16,10 +16,6 @@
 #include "../include/Dados.h"
 using namespace std;
 
-void mensagem_teste() {
-    std::cout << "TESTE TESTE TESTE" << std::endl;
-}
-
 void mensagem_inicial() {
     std::cout << "==========================================" << std::endl;
     std::cout << "Seja bem-vindo ao sistema de hotelaria!" << std::endl;
