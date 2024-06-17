@@ -1,5 +1,3 @@
-
-
 #include <string>
 #include "Hospede.h"
 #include "Reserva.h"
