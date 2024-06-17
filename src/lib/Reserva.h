@@ -3,10 +3,10 @@
 
 #include <string>
 #include <vector>
-#include "Hospede.h"
-#include "Quarto.h"
-#include "Servico.h"
-#include "Pagamento.h"
+#include "Hospede.h" //Heranca
+#include "Quarto.h" //Heranca
+#include "Servico.h" //Heranca
+#include "Pagamento.h" //Heranca
 
 class Reserva {
 private:
