@@ -257,8 +257,8 @@ int main() {
     
     mensagem_inicial();
 
-    bool continuar = true;
-    int escolha;
+    bool continuar = true; //variavel tipo bool para controlar continuidade do while.
+    int escolha; //variavel tipo int para receber entrada de interacao usuario e interface.
 
     while (continuar) {
         mensagem_menu();
