@@ -253,7 +253,7 @@ void listarAvaliacoes(Dados& dados) { //Funcao void 12, lista avalicacoes regist
     }
 }
 
-int main() {
+int main() { //principal
     
     mensagem_inicial();
 
