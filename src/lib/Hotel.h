@@ -3,10 +3,10 @@
 
 #include <string>
 #include <vector>
-#include "Quarto.h"
-#include "Hospede.h"
-#include "Avaliacao.h"
-#include "Pagamento.h"
+#include "Quarto.h" //Heranca
+#include "Hospede.h" //Heranca
+#include "Avaliacao.h" //Heranca
+#include "Pagamento.h" //Heranca
 
 using std::string;
 using std::vector;
