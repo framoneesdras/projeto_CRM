@@ -47,16 +47,16 @@ void cadastrarQuartoSimples(Dados& dados) { //Funcao void 1, cadastra quartos si
     double preco;
     bool disponivel;
 
-    std::cout << "Enter the room ID: ";
+    std::cout << "Digite o ID do quarto: ";
     std::cin >> idQuarto;
 
-    std::cout << "Enter the hotel ID: ";
+    std::cout << "Digite o ID do hotel: ";
     std::cin >> idHotel;
 
-    std::cout << "Enter the price: ";
+    std::cout << "Digite o preco: ";
     std::cin >> preco;
 
-    std::cout << "Is the room available? (1 for yes, 0 for no): ";
+    std::cout << "O quarto esta diponivel? (1 para sim, 0 para nao): ";
     std::cin >> disponivel;
 
     Quarto_Simples newRoom(idQuarto, idHotel, preco, disponivel);
