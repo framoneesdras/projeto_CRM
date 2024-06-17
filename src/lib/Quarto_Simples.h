@@ -1,7 +1,7 @@
 #ifndef QUARTO_SIMPLES_H
 #define QUARTO_SIMPLES_H
 
-#include "Quarto.h"
+#include "Quarto.h" //Heranca
 #include <vector>
 #include <string>
 
