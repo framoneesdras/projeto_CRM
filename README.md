@@ -20,19 +20,19 @@ Todos os registros realizados são salvos em um arquivo .csv, o que permitem ser
 
 ## Comandos
 
-"1" -> Cadastrar Quarto Simples" << endl;
-"2" -> Cadastrar Quarto Suite" << endl;
-"3" -> Cadastrar Quarto Luxo" << endl;
-"4" -> Cadastrar Hospede" << endl;
-"5" -> Cadastrar Reserva" << endl;
-"6" -> Cadastrar Pagamento" << endl;
-"7" -> Cadastrar Avaliacao" << endl;
-"8" -> Listar Quartos" << endl;
-"9" -> Listar Hospedes" << endl;
-"10" -> Listar Reservas" << endl;
-"11" -> Listar Pagamentos" << endl;
-"12" -> Listar Avaliacoes" << endl;
-"13" -> Sair" << endl;
+* "1" -> Cadastrar Quarto Simples" << endl;
+* "2" -> Cadastrar Quarto Suite" << endl;
+* "3" -> Cadastrar Quarto Luxo" << endl;
+* "4" -> Cadastrar Hospede" << endl;
+* "5" -> Cadastrar Reserva" << endl;
+* "6" -> Cadastrar Pagamento" << endl;
+* "7" -> Cadastrar Avaliacao" << endl;
+* "8" -> Listar Quartos" << endl;
+* "9" -> Listar Hospedes" << endl;
+* "10" -> Listar Reservas" << endl;
+* "11" -> Listar Pagamentos" << endl;
+* "12" -> Listar Avaliacoes" << endl;
+* "13" -> Sair" << endl;
 
 Ao escolher a opção, será chamada sua função void referente que usará das classes construídas por meio de herança e polimorfismo, imprimirá as intruções de preenchimento, registrará as informações e salvará no arquivo .csv.
 
