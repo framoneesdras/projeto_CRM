@@ -1,7 +1,7 @@
 #ifndef QUARTO_LUXO_H
 #define QUARTO_LUXO_H
 
-#include "Quarto.h"
+#include "Quarto.h" //Heranca
 #include <vector>
 #include <string>
 
