@@ -1,7 +1,7 @@
 #ifndef CLIENTE_H
 #define CLIENTE_H
 
-#include "Pessoa.h"
+#include "Pessoa.h" //Heranca
 #include <string>
 
 class Cliente : public Pessoa {
