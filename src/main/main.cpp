@@ -70,16 +70,16 @@ void cadastrarQuartoSuite(Dados& dados) { //Funcao void 2, cadastra quartos suit
     double preco;
     bool disponivel;
 
-    std::cout << "Enter the room ID: ";
+    std::cout << "Digite o ID do quarto: ";
     std::cin >> idQuarto;
 
-    std::cout << "Enter the hotel ID: ";
+    std::cout << "Digite o ID do hotel: ";
     std::cin >> idHotel;
 
-    std::cout << "Enter the price: ";
+    std::cout << "Digite o preco: ";
     std::cin >> preco;
 
-    std::cout << "Is the room available? (1 for yes, 0 for no): ";
+    std::cout << "O quarto esta diponivel? (1 para sim, 0 para nao): ";
     std::cin >> disponivel;
 
     Quarto_Suite newRoom(idQuarto, idHotel, preco, disponivel);
@@ -93,16 +93,16 @@ void cadastrarQuartoLuxo(Dados& dados) { //Funcao void 3, cadastra quartos luxo 
     double preco;
     bool disponivel;
 
-    std::cout << "Enter the room ID: ";
+    std::cout << "Digite o ID do quarto: ";
     std::cin >> idQuarto;
 
-    std::cout << "Enter the hotel ID: ";
+    std::cout << "Digite o ID do hotel: ";
     std::cin >> idHotel;
 
-    std::cout << "Enter the price: ";
+    std::cout << "Digite o preco: ";
     std::cin >> preco;
 
-    std::cout << "Is the room available? (1 for yes, 0 for no): ";
+    std::cout << "O quarto esta diponivel? (1 para sim, 0 para nao): ";
     std::cin >> disponivel;
 
     Quarto_Luxo newRoom(idQuarto, idHotel, preco, disponivel);
@@ -114,14 +114,14 @@ void cadastrarQuartoLuxo(Dados& dados) { //Funcao void 3, cadastra quartos luxo 
 void cadastrarHospede(Dados& dados) { //Funcao void 4, cadastra hospedes (heranca de cliente -> pessoa)
     std::string nome, telefone, email;
 
-    std::cout << "Enter the guest name: ";
+    std::cout << "Digite o nome do usuario: ";
     std::cin.ignore();
     std::getline(std::cin, nome);
 
-    std::cout << "Enter the guest phone number: ";
+    std::cout << "Digite o telefone do usuario: ";
     std::getline(std::cin, telefone);
 
-    std::cout << "Enter the guest email: ";
+    std::cout << "Digite o email do usuario: ";
     std::getline(std::cin, email);
 
     Hospede newGuest(nome, telefone, email);
@@ -134,16 +134,16 @@ void cadastrarReserva(Dados& dados) { //Funcao void 5, cadastra reservas (heranc
     int idHospede, idQuarto;
     std::string dataInicio, dataFim;
 
-    std::cout << "Enter the guest ID: ";
+    std::cout << "Digite o codigo do usuario: ";
     std::cin >> idHospede;
 
-    std::cout << "Enter the room ID: ";
+    std::cout << "Digite o codigo do quarto: ";
     std::cin >> idQuarto;
 
-    std::cout << "Enter the start date (YYYY-MM-DD): ";
+    std::cout << "Digite a data de entrada (AAAA-MM-DD): ";
     std::cin >> dataInicio;
 
-    std::cout << "Enter the end date (YYYY-MM-DD): ";
+    std::cout << "Digite a data de saida (AAAA-MM-DD): ";
     std::cin >> dataFim;
 
     Reserva newReservation(idHospede, idQuarto, dataInicio, dataFim, 0);
@@ -157,16 +157,16 @@ void cadastrarPagamento(Dados& dados) { //Funcao void 6, cadastra pagamentos (cl
     double valor;
     std::string data;
 
-    std::cout << "Enter the payment ID: ";
+    std::cout << "Digite o codigo do pagamento: ";
     std::cin >> idPagamento;
 
-    std::cout << "Enter the reservation ID: ";
+    std::cout << "Digite o codigo da reserva: ";
     std::cin >> idReserva;
 
-    std::cout << "Enter the payment amount: ";
+    std::cout << "Digite o valor do pagamento: ";
     std::cin >> valor;
 
-    std::cout << "Enter the payment date (YYYY-MM-DD): ";
+    std::cout << "Digite a data de pagamento (AAAA-MM-DD): ";
     std::cin >> data;
 
     Pagamento newPayment(idPagamento, idReserva, valor, data);
