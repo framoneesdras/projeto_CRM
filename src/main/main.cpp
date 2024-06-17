@@ -179,16 +179,16 @@ void cadastrarAvaliacao(Dados& dados) { //Funcao void 7, cadastro de avalicaos (
     int idAvaliacao, idHospede, nota;
     std::string comentario;
 
-    std::cout << "Enter the evaluation ID: ";
+    std::cout << "Digite o codigo da avaliacao: ";
     std::cin >> idAvaliacao;
 
-    std::cout << "Enter the guest ID: ";
+    std::cout << "Digite o codigo do usuario: ";
     std::cin >> idHospede;
 
-    std::cout << "Enter the rating (1-5): ";
+    std::cout << "Digite a nota (1-5): ";
     std::cin >> nota;
 
-    std::cout << "Enter the comment: ";
+    std::cout << "Digite o comentario: ";
     std::cin.ignore();
     std::getline(std::cin, comentario);
 
@@ -201,10 +201,10 @@ void cadastrarAvaliacao(Dados& dados) { //Funcao void 7, cadastro de avalicaos (
 void listarQuartos(Dados& dados) { //Funcao void 8, lista quartos registrados.
     std::vector<Quarto> quartos = dados.getQuartos();
     for (const auto& quarto : quartos) {
-        std::cout << "Room ID: " << quarto.getIdQuarto() << std::endl;
+        std::cout << "Quarto ID: " << quarto.getIdQuarto() << std::endl;
         std::cout << "Hotel ID: " << quarto.getIdHotel() << std::endl;
-        std::cout << "Price: " << quarto.getPreco() << std::endl;
-        std::cout << "Availability: " << (quarto.isDisponivel() ? "Yes" : "No") << std::endl;
+        std::cout << "Preco: " << quarto.getPreco() << std::endl;
+        std::cout << "Disponibilidade: " << (quarto.isDisponivel() ? "Yes" : "No") << std::endl;
         std::cout << std::endl;
     }
 }
@@ -212,8 +212,8 @@ void listarQuartos(Dados& dados) { //Funcao void 8, lista quartos registrados.
 void listarHospedes(Dados& dados) { //Funcao void 9, lista hospedes registrados.
     std::vector<Hospede> hospedes = dados.getHospedes();
     for (const auto& hospede : hospedes) {
-        std::cout << "Guest Name: " << hospede.getNome() << std::endl;
-        std::cout << "Phone Number: " << hospede.getTelefone() << std::endl;
+        std::cout << "Nome usuario: " << hospede.getNome() << std::endl;
+        std::cout << "Numero telefone: " << hospede.getTelefone() << std::endl;
         std::cout << "Email: " << hospede.getEmail() << std::endl;
         std::cout << std::endl;
     }
@@ -222,11 +222,11 @@ void listarHospedes(Dados& dados) { //Funcao void 9, lista hospedes registrados.
 void listarReservas(Dados& dados) { //Funcao void 10, lista reservas registradas.
     std::vector<Reserva> reservas = dados.getReservas();
     for (const auto& reserva : reservas) {
-        std::cout << "Reservation ID: " << reserva.getIdReserva() << std::endl;
-        std::cout << "Guest ID: " << reserva.getIdHospede() << std::endl;
-        std::cout << "Room ID: " << reserva.getIdQuarto() << std::endl;
-        std::cout << "Start Date: " << reserva.getDataInicio() << std::endl;
-        std::cout << "End Date: " << reserva.getDataFim() << std::endl;
+        std::cout << "Codigo de reserva: " << reserva.getIdReserva() << std::endl;
+        std::cout << "Codigo de usuario: " << reserva.getIdHospede() << std::endl;
+        std::cout << "Codigo do quarto: " << reserva.getIdQuarto() << std::endl;
+        std::cout << "Data de entrada: " << reserva.getDataInicio() << std::endl;
+        std::cout << "Data de saida: " << reserva.getDataFim() << std::endl;
         std::cout << std::endl;
     }
 }
@@ -234,10 +234,10 @@ void listarReservas(Dados& dados) { //Funcao void 10, lista reservas registradas
 void listarPagamentos(Dados& dados) { //Funcao void 11, lista pagamentos registrados.
     std::vector<Pagamento> pagamentos = dados.getPagamentos();
     for (const auto& pagamento : pagamentos) {
-        std::cout << "Payment ID: " << pagamento.getIdPagamento() << std::endl;
-        std::cout << "Reservation ID: " << pagamento.getIdReserva() << std::endl;
-        std::cout << "Amount: " << pagamento.getValor() << std::endl;
-        std::cout << "Date: " << pagamento.getData() << std::endl;
+        std::cout << "Codigo do pagamento: " << pagamento.getIdPagamento() << std::endl;
+        std::cout << "Codigo da reserva: " << pagamento.getIdReserva() << std::endl;
+        std::cout << "Valor: " << pagamento.getValor() << std::endl;
+        std::cout << "Data: " << pagamento.getData() << std::endl;
         std::cout << std::endl;
     }
 }
@@ -245,10 +245,10 @@ void listarPagamentos(Dados& dados) { //Funcao void 11, lista pagamentos registr
 void listarAvaliacoes(Dados& dados) { //Funcao void 12, lista avalicacoes registradas.
     std::vector<Avaliacao> avaliacoes = dados.getAvaliacoes();
     for (const auto& avaliacao : avaliacoes) {
-        std::cout << "Evaluation ID: " << avaliacao.getIdAvaliacao() << std::endl;
-        std::cout << "Guest ID: " << avaliacao.getIdHospede() << std::endl;
-        std::cout << "Rating: " << avaliacao.getNota() << std::endl;
-        std::cout << "Comment: " << avaliacao.getComentario() << std::endl;
+        std::cout << "Codigo da avaliacao: " << avaliacao.getIdAvaliacao() << std::endl;
+        std::cout << "Codigo do usuario: " << avaliacao.getIdHospede() << std::endl;
+        std::cout << "Avalicao: " << avaliacao.getNota() << std::endl;
+        std::cout << "Comentario: " << avaliacao.getComentario() << std::endl;
         std::cout << std::endl;
     }
 }
