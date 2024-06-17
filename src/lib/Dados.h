@@ -5,11 +5,11 @@
 #include <vector>
 #include <string>
 #include <fstream>
-#include "Quarto.h"
-#include "Hospede.h"
-#include "Reserva.h"
-#include "Pagamento.h"
-#include "Avaliacao.h"
+#include "Quarto.h" //Heranca
+#include "Hospede.h" //Heranca
+#include "Reserva.h" //Heranca
+#include "Pagamento.h" //Heranca
+#include "Avaliacao.h" //Heranca
 
 class Dados {
 private:
