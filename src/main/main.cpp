@@ -18,6 +18,7 @@
 using namespace std;
 
 Dados dados("Dados.csv");
+
 void mensagem_inicial() {
     cout << "==========================================" << endl;
     cout << "Seja bem-vindo ao sistema de hotelaria!" << endl;
