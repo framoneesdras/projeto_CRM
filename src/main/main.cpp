@@ -1,8 +1,8 @@
-#include <iostream>
+#include <iostream> //Inclusao bibliotecas padrão.
 #include <string>
 #include <vector>
 
-#include "Pessoa.h"
+#include "Pessoa.h" //Inclusao classes criadas.
 #include "Avaliacao.h"
 #include "Cliente.h"
 #include "Hospede.h"
@@ -15,17 +15,17 @@
 #include "Reserva.h"
 #include "Dados.h"
 
-using namespace std;
+using namespace std; //Otimizacao uso biblioteca iostream.
 
 Dados dados("Dados.csv");
 
-void mensagem_inicial() {
+void mensagem_inicial() { //Mensagem padrao inicializacao sistema
     cout << "==========================================" << endl;
     cout << "Seja bem-vindo ao sistema de hotelaria!" << endl;
     cout << "==========================================" << endl << endl;
 }
 
-void mensagem_menu() {
+void mensagem_menu() { //Mensagem padrao exibir menu (usada diversas vezes)
     cout << "1 -> Cadastrar Quarto Simples" << endl;
     cout << "2 -> Cadastrar Quarto Suite" << endl;
     cout << "3 -> Cadastrar Quarto Luxo" << endl;
@@ -42,7 +42,7 @@ void mensagem_menu() {
     cout << endl;
 }
 
-void cadastrarQuartoSimples(Dados& dados) {
+void cadastrarQuartoSimples(Dados& dados) { //Funcao void 1, cadastra quartos simples (heranca de quarto)
     int idQuarto, idHotel;
     double preco;
     bool disponivel;
@@ -65,7 +65,7 @@ void cadastrarQuartoSimples(Dados& dados) {
     dados.salvarQuartos(rooms);
 }
 
-void cadastrarQuartoSuite(Dados& dados) {
+void cadastrarQuartoSuite(Dados& dados) { //Funcao void 2, cadastra quartos suites (heranca de quarto)
     int idQuarto, idHotel;
     double preco;
     bool disponivel;
@@ -88,7 +88,7 @@ void cadastrarQuartoSuite(Dados& dados) {
     dados.salvarQuartos(rooms);
 }
 
-void cadastrarQuartoLuxo(Dados& dados) {
+void cadastrarQuartoLuxo(Dados& dados) { //Funcao void 3, cadastra quartos luxo (heranca de quarto)
     int idQuarto, idHotel;
     double preco;
     bool disponivel;
@@ -111,7 +111,7 @@ void cadastrarQuartoLuxo(Dados& dados) {
     dados.salvarQuartos(rooms);
 }
 
-void cadastrarHospede(Dados& dados) {
+void cadastrarHospede(Dados& dados) { //Funcao void 4, cadastra hospedes (heranca de cliente -> pessoa)
     std::string nome, telefone, email;
 
     std::cout << "Enter the guest name: ";
@@ -130,7 +130,7 @@ void cadastrarHospede(Dados& dados) {
     dados.salvarHospedes(guests);
 }
 
-void cadastrarReserva(Dados& dados) {
+void cadastrarReserva(Dados& dados) { //Funcao void 5, cadastra reservas (heranca de cliente -> pessoa)
     int idHospede, idQuarto;
     std::string dataInicio, dataFim;
 
@@ -152,7 +152,7 @@ void cadastrarReserva(Dados& dados) {
     dados.salvarReservas(reservations);
 }
 
-void cadastrarPagamento(Dados& dados) {
+void cadastrarPagamento(Dados& dados) { //Funcao void 6, cadastra pagamentos (classe Pagamento)
     int idPagamento, idReserva;
     double valor;
     std::string data;
@@ -175,7 +175,7 @@ void cadastrarPagamento(Dados& dados) {
     dados.salvarPagamentos(payments);
 }
 
-void cadastrarAvaliacao(Dados& dados) {
+void cadastrarAvaliacao(Dados& dados) { //Funcao void 7, cadastro de avalicaos (classe avaliacoes)
     int idAvaliacao, idHospede, nota;
     std::string comentario;
 
@@ -198,7 +198,7 @@ void cadastrarAvaliacao(Dados& dados) {
     dados.salvarAvaliacoes(evaluations);
 }
 
-void listarQuartos(Dados& dados) {
+void listarQuartos(Dados& dados) { //Funcao void 8, lista quartos registrados.
     std::vector<Quarto> quartos = dados.getQuartos();
     for (const auto& quarto : quartos) {
         std::cout << "Room ID: " << quarto.getIdQuarto() << std::endl;
@@ -209,7 +209,7 @@ void listarQuartos(Dados& dados) {
     }
 }
 
-void listarHospedes(Dados& dados) {
+void listarHospedes(Dados& dados) { //Funcao void 9, lista hospedes registrados.
     std::vector<Hospede> hospedes = dados.getHospedes();
     for (const auto& hospede : hospedes) {
         std::cout << "Guest Name: " << hospede.getNome() << std::endl;
@@ -219,7 +219,7 @@ void listarHospedes(Dados& dados) {
     }
 }
 
-void listarReservas(Dados& dados) {
+void listarReservas(Dados& dados) { //Funcao void 10, lista reservas registradas.
     std::vector<Reserva> reservas = dados.getReservas();
     for (const auto& reserva : reservas) {
         std::cout << "Reservation ID: " << reserva.getIdReserva() << std::endl;
@@ -231,7 +231,7 @@ void listarReservas(Dados& dados) {
     }
 }
 
-void listarPagamentos(Dados& dados) {
+void listarPagamentos(Dados& dados) { //Funcao void 11, lista pagamentos registrados.
     std::vector<Pagamento> pagamentos = dados.getPagamentos();
     for (const auto& pagamento : pagamentos) {
         std::cout << "Payment ID: " << pagamento.getIdPagamento() << std::endl;
@@ -242,7 +242,7 @@ void listarPagamentos(Dados& dados) {
     }
 }
 
-void listarAvaliacoes(Dados& dados) {
+void listarAvaliacoes(Dados& dados) { //Funcao void 12, lista avalicacoes registradas.
     std::vector<Avaliacao> avaliacoes = dados.getAvaliacoes();
     for (const auto& avaliacao : avaliacoes) {
         std::cout << "Evaluation ID: " << avaliacao.getIdAvaliacao() << std::endl;
@@ -254,8 +254,8 @@ void listarAvaliacoes(Dados& dados) {
 }
 
 int main() {
+    
     mensagem_inicial();
-
 
     bool continuar = true;
     int escolha;
@@ -309,6 +309,8 @@ int main() {
                 cout << "Escolha invalida" << endl << endl;
                 break;
         }
+        
     }
+
     return 0;
 }
