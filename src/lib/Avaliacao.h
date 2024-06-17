@@ -3,8 +3,8 @@
 
 #include <iostream>
 #include <string>
-#include "Hospede.h"
-#include "Reserva.h"
+#include "Hospede.h" //Heranca
+#include "Reserva.h" //Heranca
 
 class Avaliacoes {
 private:
