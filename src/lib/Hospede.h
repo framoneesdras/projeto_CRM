@@ -1,9 +1,9 @@
 #ifndef HOSPEDE_H
 #define HOSPEDE_H
 
-#include "Cliente.h"
-#include "Reserva.h"
-#include "Avaliacao.h"
+#include "Cliente.h" //Heranca
+#include "Reserva.h" //Heranca
+#include "Avaliacao.h" //Heranca
 #include <string>
 #include <vector>
 
