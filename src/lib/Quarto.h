@@ -3,9 +3,9 @@
 
 #include <string>
 #include <vector>
-#include "Reserva.h"
-#include "Hospede.h"
-#include "Servico.h"
+#include "Reserva.h" //Heranca
+#include "Hospede.h" //Heranca
+#include "Servico.h" //Heranca
 
 class Quarto {
 private:
