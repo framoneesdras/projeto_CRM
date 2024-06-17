@@ -22,7 +22,7 @@ Nosso projeto se trata de uma sistema de reservas de quartos para hoteis, permit
 
 ```bash
 # Clone o repositório
-git clone https://github.com/raulvitor84/projetoFinalPds.git
+git clone https://github.com/framoneesdras/projeto_Hotel.git
 
 # Navegue até o diretório do projeto
 cd projeto_Hotel
