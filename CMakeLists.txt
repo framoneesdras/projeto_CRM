@@ -1,33 +1,35 @@
-# Require CMAKE 3.5 
-cmake_minimum_required(VERSION 3.5)
+# If you create new headers/cpp files, add them to these list!
+set(HEADER_FILES
+	 Pessoa.h
+	 Avaliacao.h
+	 Cliente.h
+	 Hospede.h
+	 Hotel.h
+	 Pagamento.h
+	 Quarto.h
+	 Quarto_Luxo.h
+	 Quarto_Simples.h
+	 Quarto_Suite.h
+	 Reserva.h
+	 Dados.h
+	 Servico.h
+)
 
-# Project name
-project(Hotel)
-
-# Build for C++20 if we can
-set(CMAKE_CXX_STANDARD 20)
-
-
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /WX")
-
-# Any source files in this directory
-set(SOURCE_FILES src/main/main.cpp)
-
-set(LIBRARY_NAME Include)
-
-include(FetchContent)
-
-# Where any include files are
-include_directories(src/lib)
-
-# Subdirectories to build
-add_subdirectory(src/lib)
-add_subdirectory(src/tests)
+set(SOURCE_FILES
+	Pessoa.cpp
+	Avaliacao.cpp
+	Cliente.cpp
+	Hospede.cpp
+	Hotel.cpp
+	Pagamento.cpp
+	Quarto.cpp
+	Quarto_Luxo.cpp
+	Quarto_Simples.cpp
+	Quarto_Suite.cpp
+	Reserva.cpp
+	Dados.cpp
+	Servico.cpp
 
 
-
-# Name of executable
-add_executable(${PROJECT_NAME} ${SOURCE_FILES})
-
-# Link
-target_link_libraries(${PROJECT_NAME} ${LIBRARY_NAME})
+)
+add_library(Include ${SOURCE_FILES} ${HEADER_FILES})
