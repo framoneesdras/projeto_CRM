@@ -15,7 +15,12 @@
 #include "Reserva.h"
 #include "Dados.h"
 
-using namespace std; //Otimizacao uso biblioteca iostream.
+using std::string;
+using std::cout;
+using std::cin;
+using std::endl;
+using std::vector;
+using std::getline;
 
 Dados dados("Dados.csv");
 
@@ -47,20 +52,20 @@ void cadastrarQuartoSimples(Dados& dados) { //Funcao void 1, cadastra quartos si
     double preco;
     bool disponivel;
 
-    std::cout << "Digite o ID do quarto: ";
-    std::cin >> idQuarto;
+    cout << "Digite o ID do quarto: ";
+    cin >> idQuarto;
 
-    std::cout << "Digite o ID do hotel: ";
-    std::cin >> idHotel;
+    cout << "Digite o ID do hotel: ";
+    cin >> idHotel;
 
-    std::cout << "Digite o preco: ";
-    std::cin >> preco;
+    cout << "Digite o preco: ";
+    cin >> preco;
 
-    std::cout << "O quarto esta diponivel? (1 para sim, 0 para nao): ";
-    std::cin >> disponivel;
+    cout << "O quarto esta diponivel? (1 para sim, 0 para nao): ";
+    cin >> disponivel;
 
     Quarto_Simples newRoom(idQuarto, idHotel, preco, disponivel);
-    std::vector<Quarto> rooms;
+    vector<Quarto> rooms;
     rooms.push_back(newRoom);
     dados.salvarQuartos(rooms);
 }
@@ -70,20 +75,20 @@ void cadastrarQuartoSuite(Dados& dados) { //Funcao void 2, cadastra quartos suit
     double preco;
     bool disponivel;
 
-    std::cout << "Digite o ID do quarto: ";
-    std::cin >> idQuarto;
+    cout << "Digite o ID do quarto: ";
+    cin >> idQuarto;
 
-    std::cout << "Digite o ID do hotel: ";
-    std::cin >> idHotel;
+    cout << "Digite o ID do hotel: ";
+    cin >> idHotel;
 
-    std::cout << "Digite o preco: ";
-    std::cin >> preco;
+    cout << "Digite o preco: ";
+    cin >> preco;
 
-    std::cout << "O quarto esta diponivel? (1 para sim, 0 para nao): ";
-    std::cin >> disponivel;
+    cout << "O quarto esta diponivel? (1 para sim, 0 para nao): ";
+    cin >> disponivel;
 
     Quarto_Suite newRoom(idQuarto, idHotel, preco, disponivel);
-    std::vector<Quarto> rooms;
+    vector<Quarto> rooms;
     rooms.push_back(newRoom);
     dados.salvarQuartos(rooms);
 }
@@ -93,61 +98,61 @@ void cadastrarQuartoLuxo(Dados& dados) { //Funcao void 3, cadastra quartos luxo 
     double preco;
     bool disponivel;
 
-    std::cout << "Digite o ID do quarto: ";
-    std::cin >> idQuarto;
+    cout << "Digite o ID do quarto: ";
+    cin >> idQuarto;
 
-    std::cout << "Digite o ID do hotel: ";
-    std::cin >> idHotel;
+    cout << "Digite o ID do hotel: ";
+    cin >> idHotel;
 
-    std::cout << "Digite o preco: ";
-    std::cin >> preco;
+    cout << "Digite o preco: ";
+    cin >> preco;
 
-    std::cout << "O quarto esta diponivel? (1 para sim, 0 para nao): ";
-    std::cin >> disponivel;
+    cout << "O quarto esta diponivel? (1 para sim, 0 para nao): ";
+    cin >> disponivel;
 
     Quarto_Luxo newRoom(idQuarto, idHotel, preco, disponivel);
-    std::vector<Quarto> rooms;
+    vector<Quarto> rooms;
     rooms.push_back(newRoom);
     dados.salvarQuartos(rooms);
 }
 
 void cadastrarHospede(Dados& dados) { //Funcao void 4, cadastra hospedes (heranca de cliente -> pessoa)
-    std::string nome, telefone, email;
+    string nome, telefone, email;
 
-    std::cout << "Digite o nome do usuario: ";
-    std::cin.ignore();
-    std::getline(std::cin, nome);
+    cout << "Digite o nome do usuario: ";
+    cin.ignore();
+    getline(std::cin, nome);
 
-    std::cout << "Digite o telefone do usuario: ";
-    std::getline(std::cin, telefone);
+    cout << "Digite o telefone do usuario: ";
+    getline(std::cin, telefone);
 
-    std::cout << "Digite o email do usuario: ";
-    std::getline(std::cin, email);
+    cout << "Digite o email do usuario: ";
+    getline(std::cin, email);
 
     Hospede newGuest(nome, telefone, email);
-    std::vector<Hospede> guests;
+    vector<Hospede> guests;
     guests.push_back(newGuest);
     dados.salvarHospedes(guests);
 }
 
 void cadastrarReserva(Dados& dados) { //Funcao void 5, cadastra reservas (heranca de cliente -> pessoa)
     int idHospede, idQuarto;
-    std::string dataInicio, dataFim;
+    string dataInicio, dataFim;
 
-    std::cout << "Digite o codigo do usuario: ";
-    std::cin >> idHospede;
+    cout << "Digite o codigo do usuario: ";
+    cin >> idHospede;
 
-    std::cout << "Digite o codigo do quarto: ";
-    std::cin >> idQuarto;
+    cout << "Digite o codigo do quarto: ";
+    cin >> idQuarto;
 
-    std::cout << "Digite a data de entrada (AAAA-MM-DD): ";
-    std::cin >> dataInicio;
+    cout << "Digite a data de entrada (AAAA-MM-DD): ";
+    cin >> dataInicio;
 
-    std::cout << "Digite a data de saida (AAAA-MM-DD): ";
-    std::cin >> dataFim;
+    cout << "Digite a data de saida (AAAA-MM-DD): ";
+    cin >> dataFim;
 
     Reserva newReservation(idHospede, idQuarto, dataInicio, dataFim, 0);
-    std::vector<Reserva> reservations;
+    vector<Reserva> reservations;
     reservations.push_back(newReservation);
     dados.salvarReservas(reservations);
 }
@@ -155,101 +160,101 @@ void cadastrarReserva(Dados& dados) { //Funcao void 5, cadastra reservas (heranc
 void cadastrarPagamento(Dados& dados) { //Funcao void 6, cadastra pagamentos (classe Pagamento)
     int idPagamento, idReserva;
     double valor;
-    std::string data;
+    string data;
 
-    std::cout << "Digite o codigo do pagamento: ";
-    std::cin >> idPagamento;
+    cout << "Digite o codigo do pagamento: ";
+    cin >> idPagamento;
 
-    std::cout << "Digite o codigo da reserva: ";
-    std::cin >> idReserva;
+    cout << "Digite o codigo da reserva: ";
+    cin >> idReserva;
 
-    std::cout << "Digite o valor do pagamento: ";
-    std::cin >> valor;
+    cout << "Digite o valor do pagamento: ";
+    cin >> valor;
 
-    std::cout << "Digite a data de pagamento (AAAA-MM-DD): ";
-    std::cin >> data;
+    cout << "Digite a data de pagamento (AAAA-MM-DD): ";
+    cin >> data;
 
     Pagamento newPayment(idPagamento, idReserva, valor, data);
-    std::vector<Pagamento> payments;
+    vector<Pagamento> payments;
     payments.push_back(newPayment);
     dados.salvarPagamentos(payments);
 }
 
 void cadastrarAvaliacao(Dados& dados) { //Funcao void 7, cadastro de avalicaos (classe avaliacoes)
     int idAvaliacao, idHospede, nota;
-    std::string comentario;
+    string comentario;
 
-    std::cout << "Digite o codigo da avaliacao: ";
-    std::cin >> idAvaliacao;
+    cout << "Digite o codigo da avaliacao: ";
+    cin >> idAvaliacao;
 
-    std::cout << "Digite o codigo do usuario: ";
-    std::cin >> idHospede;
+    cout << "Digite o codigo do usuario: ";
+    cin >> idHospede;
 
-    std::cout << "Digite a nota (1-5): ";
-    std::cin >> nota;
+    cout << "Digite a nota (1-5): ";
+    cin >> nota;
 
-    std::cout << "Digite o comentario: ";
-    std::cin.ignore();
-    std::getline(std::cin, comentario);
+    cout << "Digite o comentario: ";
+    cin.ignore();
+    getline(std::cin, comentario);
 
     Avaliacao newEvaluation(idAvaliacao, idHospede, nota, comentario);
-    std::vector<Avaliacao> evaluations;
+    vector<Avaliacao> evaluations;
     evaluations.push_back(newEvaluation);
     dados.salvarAvaliacoes(evaluations);
 }
 
 void listarQuartos(Dados& dados) { //Funcao void 8, lista quartos registrados.
-    std::vector<Quarto> quartos = dados.getQuartos();
+    vector<Quarto> quartos = dados.getQuartos();
     for (const auto& quarto : quartos) {
-        std::cout << "Quarto ID: " << quarto.getIdQuarto() << std::endl;
-        std::cout << "Hotel ID: " << quarto.getIdHotel() << std::endl;
-        std::cout << "Preco: " << quarto.getPreco() << std::endl;
-        std::cout << "Disponibilidade: " << (quarto.isDisponivel() ? "Yes" : "No") << std::endl;
-        std::cout << std::endl;
+        cout << "Quarto ID: " << quarto.getIdQuarto() << endl;
+        cout << "Hotel ID: " << quarto.getIdHotel() << endl;
+        cout << "Preco: " << quarto.getPreco() << endl;
+        cout << "Disponibilidade: " << (quarto.isDisponivel() ? "Yes" : "No") << endl;
+        cout << endl;
     }
 }
 
 void listarHospedes(Dados& dados) { //Funcao void 9, lista hospedes registrados.
-    std::vector<Hospede> hospedes = dados.getHospedes();
+    vector<Hospede> hospedes = dados.getHospedes();
     for (const auto& hospede : hospedes) {
-        std::cout << "Nome usuario: " << hospede.getNome() << std::endl;
-        std::cout << "Numero telefone: " << hospede.getTelefone() << std::endl;
-        std::cout << "Email: " << hospede.getEmail() << std::endl;
-        std::cout << std::endl;
+        cout << "Nome usuario: " << hospede.getNome() << endl;
+        cout << "Numero telefone: " << hospede.getTelefone() << endl;
+        cout << "Email: " << hospede.getEmail() << endl;
+        cout << endl;
     }
 }
 
 void listarReservas(Dados& dados) { //Funcao void 10, lista reservas registradas.
-    std::vector<Reserva> reservas = dados.getReservas();
+    vector<Reserva> reservas = dados.getReservas();
     for (const auto& reserva : reservas) {
-        std::cout << "Codigo de reserva: " << reserva.getIdReserva() << std::endl;
-        std::cout << "Codigo de usuario: " << reserva.getIdHospede() << std::endl;
-        std::cout << "Codigo do quarto: " << reserva.getIdQuarto() << std::endl;
-        std::cout << "Data de entrada: " << reserva.getDataInicio() << std::endl;
-        std::cout << "Data de saida: " << reserva.getDataFim() << std::endl;
-        std::cout << std::endl;
+        cout << "Codigo de reserva: " << reserva.getIdReserva() << endl;
+        cout << "Codigo de usuario: " << reserva.getIdHospede() << endl;
+        cout << "Codigo do quarto: " << reserva.getIdQuarto() << endl;
+        cout << "Data de entrada: " << reserva.getDataInicio() << endl;
+        cout << "Data de saida: " << reserva.getDataFim() << endl;
+        cout << endl;
     }
 }
 
 void listarPagamentos(Dados& dados) { //Funcao void 11, lista pagamentos registrados.
-    std::vector<Pagamento> pagamentos = dados.getPagamentos();
+    vector<Pagamento> pagamentos = dados.getPagamentos();
     for (const auto& pagamento : pagamentos) {
-        std::cout << "Codigo do pagamento: " << pagamento.getIdPagamento() << std::endl;
-        std::cout << "Codigo da reserva: " << pagamento.getIdReserva() << std::endl;
-        std::cout << "Valor: " << pagamento.getValor() << std::endl;
-        std::cout << "Data: " << pagamento.getData() << std::endl;
-        std::cout << std::endl;
+        cout << "Codigo do pagamento: " << pagamento.getIdPagamento() << endl;
+        cout << "Codigo da reserva: " << pagamento.getIdReserva() << endl;
+        cout << "Valor: " << pagamento.getValor() << endl;
+        cout << "Data: " << pagamento.getData() << endl;
+        cout << endl;
     }
 }
 
 void listarAvaliacoes(Dados& dados) { //Funcao void 12, lista avalicacoes registradas.
     std::vector<Avaliacao> avaliacoes = dados.getAvaliacoes();
     for (const auto& avaliacao : avaliacoes) {
-        std::cout << "Codigo da avaliacao: " << avaliacao.getIdAvaliacao() << std::endl;
-        std::cout << "Codigo do usuario: " << avaliacao.getIdHospede() << std::endl;
-        std::cout << "Avalicao: " << avaliacao.getNota() << std::endl;
-        std::cout << "Comentario: " << avaliacao.getComentario() << std::endl;
-        std::cout << std::endl;
+        cout << "Codigo da avaliacao: " << avaliacao.getIdAvaliacao() << endl;
+        cout << "Codigo do usuario: " << avaliacao.getIdHospede() << endl;
+        cout << "Avalicao: " << avaliacao.getNota() << endl;
+        cout << "Comentario: " << avaliacao.getComentario() << endl;
+        cout << endl;
     }
 }
 
