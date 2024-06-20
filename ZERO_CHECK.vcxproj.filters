@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\victo\OneDrive\Documentos\Teste Hotel\Hotel\build\CMakeFiles\4a0a9500e9b2e3276d233f3c884d7cca\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{91BA7542-CD52-3811-A0CF-D779EC61D6B5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
